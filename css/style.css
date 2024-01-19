@@ -9,6 +9,22 @@
   box-sizing: border-box;
 }
 
+nav {
+  display: flex;
+  align-items: center;
+  border-top: 1px solid #000;
+  border-bottom: 1px solid #000;
+  height: 40px;
+}
+nav ul {
+  padding-left: 1em;
+}
+nav ul li {
+  display: inline-block;
+  width: 5em;
+  margin-right: 1em;
+}
+
 a {
   text-decoration: none;
 }
@@ -20,6 +36,7 @@ a:hover {
 div#container {
   display: flex;
   flex-direction: column;
+  margin: 1em;
 }
 
 div#content {
@@ -30,9 +47,29 @@ div#content section {
   flex-direction: row;
   flex-wrap: wrap;
   width: 80vw;
+  margin: 1em;
 }
 div#content aside {
   width: 20vw;
+  padding: 2em;
+}
+
+header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 150px;
+}
+
+footer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 150px;
+  background-color: #000;
+}
+footer p {
+  color: #fff;
 }
 
 article {
@@ -49,4 +86,7 @@ article div img {
      object-fit: cover;
   -o-object-position: center;
      object-position: center;
+}
+article div h3, article div p {
+  margin: 1em;
 }/*# sourceMappingURL=style.css.map */

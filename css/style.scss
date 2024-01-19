@@ -1,5 +1,8 @@
 @import "variables";
 @import "reset";
+@import "mixins";
+@import "menu";
+
 
 a {
     text-decoration: none;
@@ -12,6 +15,7 @@ a {
 div#container {
     display: flex;
     flex-direction: column;
+    margin: $general-margin;
 }
 
 div#content {
@@ -21,9 +25,23 @@ div#content {
         flex-direction: row;
         flex-wrap: wrap;
         width: 80vw;
+        margin: $general-margin;
     }
     aside {
         width: 20vw;
+        padding: $general-padding;
+    }
+}
+
+header {
+    @include flex-container;
+}
+
+footer {
+    @include flex-container;
+    background-color: $dark-foreground-color;
+    p {
+        color: $light-foreground-color;
     }
 }
 
@@ -37,6 +55,9 @@ article {
             width: 100%;
             object-fit: cover;
             object-position: center;
+        }
+        h3,p {
+            margin: $general-margin;
         }
     }
 }
